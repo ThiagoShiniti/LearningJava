@@ -1,17 +1,23 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    ArrayList pokemonList = new ArrayList();
+    
+    System.out.println("\n | Welcome to the TeamBuilder, to make your Pokemon team type the Pokemon's name and hit Enter.| \n");
+    int i = 1;
+    for (i=1; i<7; i++){
+    System.out.println("<Add a Pokemon to your team:>");
+    String pokemon = scan.nextLine();
+    pokemonList.add(pokemon);
+    System.out.printf("You added <%s> to your team! %n%n", pokemon);
+        }
 
-        for (int i = 1; i < 7; i++) {
-            String[] pokemon = new String[7];
-            System.out.println("Enter Pokemon " + i + " :");
-            pokemon[i] = scan.nextLine();
-            }
+    System.out.println("You completed your team!\n" + pokemonList);   
 
-        System.out.println("Your team is complete!");
-        
-        scan.close();
-    }
+    scan.close();
+
+  }
 }
