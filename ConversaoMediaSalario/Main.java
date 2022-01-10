@@ -19,7 +19,7 @@ class Main {
 
         double conta = (valor01 + valor02 + valor03) / 3;
 
-        System.out.println("Sua média salarial baseada nos seus 3 últimos salários é:" + conta);
+        System.out.printf("Sua média salarial baseada nos seus 3 últimos salários é: %.2f", conta);
 
         sc.close();
 
